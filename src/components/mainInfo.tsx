@@ -5,14 +5,18 @@ const MainInfo = () => {
   const { location, currentWeather } = useAppSelector(selectWeather);
 
   return (
-    <div className="w-full ">
-      <div className=" flex flex-row justify-between ">
-        <div className="flex flex-col gap-7">
-          <h1 className="text-4xl">
-            {location.name} / {location.country}
+    <div className="w-full  ">
+      <div className=" flex flex-row justify-between items-center ">
+        <div className="flex flex-col gap-7  text-left">
+          <h1 className="text-4xl font-semibold">
+            {location.name}
+            <span className="text-2xl font-medium"> / {location.country}</span>
           </h1>
-          {/* <p>Country: {location.country}</p> */}
           <DateTime />
+          <p className="text-5xl font-bold">
+            {currentWeather.temp_c}
+            <span className="w-8">°</span>
+          </p>
         </div>
 
         {/* nika */}

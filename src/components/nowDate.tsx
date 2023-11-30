@@ -12,8 +12,9 @@ const DateTime = () => {
 
   return (
     <div>
-      <p>Time: {date.toLocaleTimeString()}</p>
-      <p>date: {date.toLocaleDateString()}</p>
+      <p> {date.toLocaleDateString()}</p>
+      <p> {date.toLocaleTimeString()}</p>
+      {/* <p>{date.toLocaleString()}</p> */}
     </div>
   );
 };
