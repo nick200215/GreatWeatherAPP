@@ -5,8 +5,8 @@ const MainInfo = () => {
   const { location, currentWeather } = useAppSelector(selectWeather);
 
   return (
-    <div className="w-full bg-white">
-      <div className=" flex flex-row justify-between  bg-black">
+    <div className="w-full ">
+      <div className=" flex flex-row justify-between ">
         <div className="flex flex-col gap-7">
           <h1 className="text-4xl">
             {location.name} / {location.country}

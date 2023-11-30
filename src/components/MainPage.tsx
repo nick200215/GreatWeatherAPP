@@ -35,8 +35,8 @@ const MainPage = () => {
   }, [dispatch]);
 
   return (
-    <div className=" w-full bg-white flex justify-between gap-5">
-      <div className="w-full bg-white">
+    <div className=" w-full  flex justify-between gap-5">
+      <div className="w-full ">
         <MainInfo />
       </div>
     </div>
