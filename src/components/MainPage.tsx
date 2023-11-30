@@ -13,15 +13,8 @@ import {
   setWeatherForecast,
 } from "../redux/weatherSlice";
 
-interface Location {
-  name: string;
-  country: string;
-  localtime: number;
-  //   time: number;
-}
 const MainPage = () => {
   const dispatch = useAppDispatch();
-  //   const { location, currentWeather } = useAppSelector(selectWeather);
 
   useEffect(() => {
     const fetchData = async () => {
