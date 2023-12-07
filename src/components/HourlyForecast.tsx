@@ -51,8 +51,6 @@ const HourlyForecast: React.FC = () => {
     <div>
       <p className=" font-extralight pl-5 pt-3 box-border">TODAY'S FORECAST</p>
       <div className="flex justify-between flex-wrap p-8">
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment //
-        @ts-ignore
         {sixHourForecast.map(
           (hour: {
             time: string;
