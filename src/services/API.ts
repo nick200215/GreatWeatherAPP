@@ -41,7 +41,7 @@ export const getCurrentWeather = async () => {
   try {
     const response = await axios.request(options);
     const data = response.data;
-    console.log(Object(data.current));
+    console.log("GFHNJ", Object(data.current));
     return Object(data.current);
   } catch (error) {
     console.error(error);
@@ -51,8 +51,11 @@ export const getWeatherForecast = async () => {
   try {
     const response = await axios.request(options);
     const data = response.data;
-    console.log(Object(data.forecast));
-    return Object(data.forecast);
+    const forecast = Object(data.forecast);
+    console.log("awdwa", forecast.forecastday);
+    return forecast.forecastday;
+    // console.log("AWDAW", Object(data.forecastday));
+    // return Object(data.forecastday);
   } catch (error) {
     console.error(error);
   }

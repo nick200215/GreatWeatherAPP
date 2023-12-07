@@ -3,14 +3,15 @@ import { useAppSelector } from "../types/hook";
 import DateTime from "./nowDate";
 const MainInfo = () => {
   const { location, currentWeather } = useAppSelector(selectWeather);
+  // console.log(location, currentWeather);
 
   return (
-    <div className="w-full  ">
+    <div className="w-full p-1 ">
       <div className=" flex flex-row justify-between items-center ">
         <div className="flex flex-col gap-7  text-left">
           <h1 className="text-4xl font-semibold">
             {location.name}
-            <span className="text-2xl font-medium"> / {location.country}</span>
+            {/* <span className="text-2xl font-medium"> / {location.country}</span> */}
           </h1>
           <DateTime />
           <p className="text-5xl font-bold">
@@ -20,7 +21,7 @@ const MainInfo = () => {
         </div>
 
         {/* nika */}
-        <div className="w-28  ">
+        <div className="w-56 ">
           <img
             src={currentWeather.condition.icon}
             alt=""

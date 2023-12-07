@@ -12,6 +12,7 @@ import {
   setLocation,
   setWeatherForecast,
 } from "../redux/weatherSlice";
+import HourlyForecast from "./HourlyForecast";
 
 const MainPage = () => {
   const dispatch = useAppDispatch();
@@ -35,12 +36,39 @@ const MainPage = () => {
   }, [dispatch]);
 
   return (
-    <div className=" w-full  flex justify-between gap-5">
-      <div className="w-full ">
-        <MainInfo />
+    <div className=" w-full flex justify-center mt-8">
+      <div className="w-11/12  ">
+        <p className="bg-yellow-500 hidden">Searchh</p>
+        <div className=" flex gap-6 mt-8">
+          <div className="w-3/4  flex flex-col gap-7">
+            <div className="">
+              <MainInfo />
+            </div>
+            <div className="bg-weather-scondBG rounded-3xl">
+              <HourlyForecast />
+            </div>
+            <div className="bg-weather-scondBG rounded-3xl"></div>
+          </div>
+          <div className="w-1/4 bg-weather-scondBG rounded-3xl"></div>
+        </div>
       </div>
     </div>
   );
+  // return (
+  //   <div className=" w-full  flex justify-between gap-5 ">
+
+  //     <div className="w-full flex bg-slate-800">
+  //       <div className="bg-slate-600">
+  //         <div className="w-3/4 ">
+  //           <MainInfo />
+  //         </div>
+  //         <div className="w-3/6 bg-weather-scondBG">Todey forecast</div>
+  //         <div>Air Conditions</div>
+  //       </div>
+  //       <div className="bg-slate-700">3 Days forecast</div>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default MainPage;

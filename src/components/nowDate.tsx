@@ -11,10 +11,9 @@ const DateTime = () => {
   });
 
   return (
-    <div>
+    <div className="text-xs text-slate-400">
       <p> {date.toLocaleDateString()}</p>
       <p> {date.toLocaleTimeString()}</p>
-      {/* <p>{date.toLocaleString()}</p> */}
     </div>
   );
 };
