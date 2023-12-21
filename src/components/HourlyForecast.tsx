@@ -49,7 +49,9 @@ const HourlyForecast: React.FC = () => {
 
   return (
     <div>
-      <p className=" font-extralight pl-5 pt-3 box-border">TODAY'S FORECAST</p>
+      <h1 className=" font-extralight pl-5 pt-3 box-border">
+        TODAY'S FORECAST
+      </h1>
       <div className="flex justify-between flex-wrap p-8">
         {sixHourForecast.map(
           (hour: {
@@ -57,13 +59,15 @@ const HourlyForecast: React.FC = () => {
             condition: { icon: string };
             temp_c: number;
           }) => (
-            <div
-              key={hour.time}
-              className="w-16  flex flex-col gap-1 justify-center text-center"
-            >
-              <p className="text-base">{hour.time.split(" ")[1]} </p>
-              <img src={hour.condition.icon} alt="" className="" />
-              <p className="text-xl font-bold">{hour.temp_c}°</p>
+            <div className="border-x-[1px] border-gray-500 px-7">
+              <div
+                key={hour.time}
+                className="w-16 flex flex-col gap-1 justify-center text-center    "
+              >
+                <p className="text-base">{hour.time.split(" ")[1]} </p>
+                <img src={hour.condition.icon} alt="" className="" />
+                <p className="text-xl font-bold">{hour.temp_c}°</p>
+              </div>
             </div>
           )
         )}

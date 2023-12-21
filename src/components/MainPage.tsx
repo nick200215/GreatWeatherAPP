@@ -13,6 +13,8 @@ import {
   setWeatherForecast,
 } from "../redux/weatherSlice";
 import HourlyForecast from "./HourlyForecast";
+import DayForecast from "./DayForecast";
+import OtherInfo from "./OtherInfo";
 
 const MainPage = () => {
   const dispatch = useAppDispatch();
@@ -47,9 +49,13 @@ const MainPage = () => {
             <div className="bg-weather-scondBG rounded-3xl">
               <HourlyForecast />
             </div>
-            <div className="bg-weather-scondBG rounded-3xl"></div>
+            <div className="bg-weather-scondBG rounded-3xl">
+              <OtherInfo />
+            </div>
           </div>
-          <div className="w-1/4 bg-weather-scondBG rounded-3xl"></div>
+          <div className=" w-1/4 font-light bg-weather-scondBG rounded-3xl p-4 ">
+            <DayForecast />
+          </div>
         </div>
       </div>
     </div>
