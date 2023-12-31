@@ -25,6 +25,11 @@ interface ForecastHour {
 }
 
 interface WeatherForecast {
+  astro: {
+    sunrise: string;
+    sunset: string;
+  };
+  date: string;
   length: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
@@ -50,6 +55,8 @@ const initialState: WeatherState = {
     condition: { icon: "" },
   },
   weatherForecast: {
+    astro: { sunrise: "", sunset: "" },
+    date: "",
     forecastday: [],
     length: 0,
   },

@@ -5,7 +5,7 @@ const options = {
   url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
   params: {
     q: "Tbilisi",
-    days: "4",
+    days: "3",
   },
   headers: {
     "X-RapidAPI-Key": "1fdaf4db93msh3aa938a71e6953ep18ec6djsnc68866367d53",
@@ -27,7 +27,6 @@ export const getCurrentWeather = async () => {
   try {
     const response = await axios.request(options);
     const data = response.data;
-    console.log("GFHNJ", Object(data.current));
     return Object(data.current);
   } catch (error) {
     console.error(error);
