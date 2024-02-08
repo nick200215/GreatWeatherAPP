@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { selectWeather } from "../redux/weatherSlice";
 import { useAppSelector } from "../types/hook";
 import DateTime from "./nowDate";
