@@ -13,6 +13,7 @@ interface CurrentWeather {
 
   condition: {
     icon: string;
+    text: string;
   };
 }
 
@@ -52,7 +53,7 @@ const initialState: WeatherState = {
     wind_kph: 0,
     feelslike_c: 0,
     uv: 0,
-    condition: { icon: "" },
+    condition: { icon: "", text: "" },
   },
   weatherForecast: {
     astro: { sunrise: "", sunset: "" },

@@ -68,7 +68,7 @@ const HourlyForecast: React.FC = () => {
                   {hour.time.split(" ")[1]}{" "}
                 </p>
                 <img src={hour.condition.icon} alt="" className="" />
-                <p className="text-xl font-bold">{hour.temp_c}°</p>
+                <p className="text-xl font-bold">{Math.round(hour.temp_c)}°</p>
               </div>
             </div>
           )

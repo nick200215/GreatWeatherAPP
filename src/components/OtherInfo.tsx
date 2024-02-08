@@ -41,7 +41,7 @@ const OtherInfo = () => {
                 <h3>Real Feel</h3>
               </div>
               <p className="text-3xl font-bold">
-                {currentWeather.feelslike_c}°
+                {Math.round(currentWeather.feelslike_c)}°
               </p>
             </div>
 
